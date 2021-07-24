@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_standard">16dp</dimen>
+    <dimen name="text_size_toolbar">28sp</dimen>
+    <dimen name="button_radius_large">50dp</dimen>
+</resources>

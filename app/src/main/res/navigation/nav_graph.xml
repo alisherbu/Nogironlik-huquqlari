@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="uz.texnopos.mehrtilsimi.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+
+        <action
+            android:id="@+id/action_splashFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_graph"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="uz.texnopos.mehrtilsimi.ui.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+
+        <action
+            android:id="@+id/action_mainFragment_to_authorFragment"
+            app:destination="@id/authorFragment" />
+
+        <action
+            android:id="@+id/action_mainFragment_to_questionsFragment"
+            app:destination="@id/questionsFragment" />
+
+        <action
+            android:id="@+id/action_mainFragment_to_rightsFragment"
+            app:destination="@id/rightsFragment" />
+
+        <action
+            android:id="@+id/action_mainFragment_to_libraryFragment"
+            app:destination="@id/libraryFragment" />
+
+        <action
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/authorFragment"
+        android:name="uz.texnopos.mehrtilsimi.ui.author.AuthorFragment"
+        android:label="fragment_author"
+        tools:layout="@layout/fragment_author" />
+
+    <fragment
+        android:id="@+id/rightsFragment"
+        android:name="uz.texnopos.mehrtilsimi.ui.rights.RightsFragment"
+        android:label="fragment_rights"
+        tools:layout="@layout/fragment_rights" >
+        <action
+            android:id="@+id/action_rightsFragment_to_forReadFragment"
+            app:destination="@id/forReadFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/questionsFragment"
+        android:name="uz.texnopos.mehrtilsimi.ui.questions.QuestionsFragment"
+        android:label="fragment_questions"
+        tools:layout="@layout/fragment_questions" />
+    <fragment
+        android:id="@+id/libraryFragment"
+        android:name="uz.texnopos.mehrtilsimi.ui.library.LibraryFragment"
+        android:label="fragment_library"
+        tools:layout="@layout/fragment_library" >
+        <action
+            android:id="@+id/action_libraryFragment_to_pdfViewerFragment"
+            app:destination="@id/pdfViewerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="uz.texnopos.mehrtilsimi.ui.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/pdfViewerFragment"
+        android:name="uz.texnopos.mehrtilsimi.ui.library.PdfViewerFragment"
+        android:label="PdfViewerFragment"
+        tools:layout="@layout/fragment_pdf_viewer"/>
+    <fragment
+        android:id="@+id/forReadFragment"
+        android:name="uz.texnopos.mehrtilsimi.ui.reading.ForReadFragment"
+        android:label="ForReadFragment"
+        tools:layout="@layout/fragment_for_read"/>
+
+</navigation>
