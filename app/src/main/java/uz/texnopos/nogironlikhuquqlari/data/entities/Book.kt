@@ -1,4 +1,4 @@
-package uz.texnopos.mehrtilsimi.data.entities
+package uz.texnopos.nogironlikhuquqlari.data.entities
 
 data class Book(
     var bookName:String

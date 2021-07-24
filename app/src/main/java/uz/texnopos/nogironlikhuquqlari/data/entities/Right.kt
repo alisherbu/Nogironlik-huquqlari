@@ -1,4 +1,4 @@
-package uz.texnopos.mehrtilsimi.data.entities
+package uz.texnopos.nogironlikhuquqlari.data.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

@@ -1,10 +1,10 @@
-package uz.texnopos.mehrtilsimi.ui.questions
+package uz.texnopos.nogironlikhuquqlari.ui.questions
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import uz.texnopos.mehrtilsimi.data.dao.Dao
-import uz.texnopos.mehrtilsimi.data.entities.Question
+import uz.texnopos.nogironlikhuquqlari.data.dao.Dao
+import uz.texnopos.nogironlikhuquqlari.data.entities.Question
 
 class QuestionsViewModel(private val dao: Dao): ViewModel() {
 

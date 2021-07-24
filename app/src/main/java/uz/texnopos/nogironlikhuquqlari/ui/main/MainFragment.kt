@@ -1,4 +1,4 @@
-package uz.texnopos.mehrtilsimi.ui.main
+package uz.texnopos.nogironlikhuquqlari.ui.main
 
 import android.content.Intent
 import android.net.Uri
@@ -7,8 +7,8 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import uz.texnopos.mehrtilsimi.R
-import uz.texnopos.mehrtilsimi.databinding.FragmentMainBinding
+import uz.texnopos.nogironlikhuquqlari.R
+import uz.texnopos.nogironlikhuquqlari.databinding.FragmentMainBinding
 
 class MainFragment : Fragment(R.layout.fragment_main) {
 

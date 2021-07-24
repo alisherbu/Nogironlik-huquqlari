@@ -1,10 +1,10 @@
-package uz.texnopos.mehrtilsimi.data.dao
+package uz.texnopos.nogironlikhuquqlari.data.dao
 
 import androidx.room.Dao
 import androidx.room.Query
-import uz.texnopos.mehrtilsimi.data.entities.Author
-import uz.texnopos.mehrtilsimi.data.entities.Question
-import uz.texnopos.mehrtilsimi.data.entities.Right
+import uz.texnopos.nogironlikhuquqlari.data.entities.Author
+import uz.texnopos.nogironlikhuquqlari.data.entities.Question
+import uz.texnopos.nogironlikhuquqlari.data.entities.Right
 
 @Dao
 interface Dao {

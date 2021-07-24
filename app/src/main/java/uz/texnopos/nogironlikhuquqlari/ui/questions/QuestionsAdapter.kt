@@ -1,28 +1,29 @@
-package uz.texnopos.mehrtilsimi.ui.questions
+package uz.texnopos.nogironlikhuquqlari.ui.questions
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.text.HtmlCompat
 import androidx.recyclerview.widget.RecyclerView
-import uz.texnopos.mehrtilsimi.data.entities.Question
-import uz.texnopos.mehrtilsimi.databinding.ItemQuestionBinding
+import uz.texnopos.nogironlikhuquqlari.data.entities.Question
+import uz.texnopos.nogironlikhuquqlari.databinding.ItemQuestionBinding
 
-class QuestionsAdapter: RecyclerView.Adapter<QuestionsAdapter.QuestionsViewHolder>() {
+class QuestionsAdapter : RecyclerView.Adapter<QuestionsAdapter.QuestionsViewHolder>() {
 
-    inner class QuestionsViewHolder(private val binding: ItemQuestionBinding): RecyclerView.ViewHolder(binding.root){
-        fun populateModel(questions: Question){
+    inner class QuestionsViewHolder(private val binding: ItemQuestionBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun populateModel(questions: Question) {
             binding.tvQuestion.text = questions.title
         }
     }
 
-    var models : List<Question> = listOf()
+    var models: List<Question> = listOf()
         set(value) {
             field = value
             notifyDataSetChanged()
         }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): QuestionsViewHolder {
-        val binding = ItemQuestionBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            ItemQuestionBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return QuestionsViewHolder(binding)
     }
 

@@ -1,4 +1,4 @@
-package uz.texnopos.mehrtilsimi.ui.author
+package uz.texnopos.nogironlikhuquqlari.ui.author
 
 import android.os.Bundle
 import android.view.View
@@ -6,9 +6,9 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import uz.texnopos.mehrtilsimi.R
-import uz.texnopos.mehrtilsimi.core.onClick
-import uz.texnopos.mehrtilsimi.databinding.FragmentAuthorBinding
+import uz.texnopos.nogironlikhuquqlari.R
+import uz.texnopos.nogironlikhuquqlari.core.onClick
+import uz.texnopos.nogironlikhuquqlari.databinding.FragmentAuthorBinding
 
 
 class AuthorFragment : Fragment(R.layout.fragment_author) {

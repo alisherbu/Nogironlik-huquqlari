@@ -1,14 +1,13 @@
-package uz.texnopos.mehrtilsimi
+package uz.texnopos.nogironlikhuquqlari
 
 import android.app.Application
-import androidx.core.content.ContextCompat
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidFileProperties
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
-import uz.texnopos.mehrtilsimi.core.SharedPrefUtils
-import uz.texnopos.mehrtilsimi.di.dataModule
-import uz.texnopos.mehrtilsimi.di.viewModelModule
+import uz.texnopos.nogironlikhuquqlari.core.SharedPrefUtils
+import uz.texnopos.nogironlikhuquqlari.di.dataModule
+import uz.texnopos.nogironlikhuquqlari.di.viewModelModule
 
 class App:Application() {
     private val modules = listOf(
@@ -16,7 +15,7 @@ class App:Application() {
     )
     override fun onCreate() {
         super.onCreate()
-        appInstance=this
+        appInstance =this
 
         startKoin {
             androidLogger()

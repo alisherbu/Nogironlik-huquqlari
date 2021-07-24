@@ -1,4 +1,4 @@
-package uz.texnopos.mehrtilsimi.core
+package uz.texnopos.nogironlikhuquqlari.core
 
 object Constants{
 const val myPreferences="MySharedPreferences"

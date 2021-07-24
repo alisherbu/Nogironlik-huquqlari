@@ -1,9 +1,9 @@
-package uz.texnopos.mehrtilsimi.core
+package uz.texnopos.nogironlikhuquqlari.core
 
 import android.content.Context
 import android.content.SharedPreferences
-import uz.texnopos.mehrtilsimi.App.Companion.getAppInstance
-import uz.texnopos.mehrtilsimi.core.Constants.myPreferences
+import uz.texnopos.nogironlikhuquqlari.App.Companion.getAppInstance
+import uz.texnopos.nogironlikhuquqlari.core.Constants.myPreferences
 
 class SharedPrefUtils() {
     private val mSharedPreferences: SharedPreferences = getAppInstance()

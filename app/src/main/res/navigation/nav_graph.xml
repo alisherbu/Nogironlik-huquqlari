@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="uz.texnopos.mehrtilsimi.ui.splash.SplashFragment"
+        android:name="uz.texnopos.nogironlikhuquqlari.ui.splash.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
 
@@ -23,7 +23,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="uz.texnopos.mehrtilsimi.ui.main.MainFragment"
+        android:name="uz.texnopos.nogironlikhuquqlari.ui.main.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
 
@@ -51,13 +51,13 @@
 
     <fragment
         android:id="@+id/authorFragment"
-        android:name="uz.texnopos.mehrtilsimi.ui.author.AuthorFragment"
+        android:name="uz.texnopos.nogironlikhuquqlari.ui.author.AuthorFragment"
         android:label="fragment_author"
         tools:layout="@layout/fragment_author" />
 
     <fragment
         android:id="@+id/rightsFragment"
-        android:name="uz.texnopos.mehrtilsimi.ui.rights.RightsFragment"
+        android:name="uz.texnopos.nogironlikhuquqlari.ui.rights.RightsFragment"
         android:label="fragment_rights"
         tools:layout="@layout/fragment_rights" >
         <action
@@ -67,12 +67,12 @@
 
     <fragment
         android:id="@+id/questionsFragment"
-        android:name="uz.texnopos.mehrtilsimi.ui.questions.QuestionsFragment"
+        android:name="uz.texnopos.nogironlikhuquqlari.ui.questions.QuestionsFragment"
         android:label="fragment_questions"
         tools:layout="@layout/fragment_questions" />
     <fragment
         android:id="@+id/libraryFragment"
-        android:name="uz.texnopos.mehrtilsimi.ui.library.LibraryFragment"
+        android:name="uz.texnopos.nogironlikhuquqlari.ui.library.LibraryFragment"
         android:label="fragment_library"
         tools:layout="@layout/fragment_library" >
         <action
@@ -81,17 +81,17 @@
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="uz.texnopos.mehrtilsimi.ui.settings.SettingsFragment"
+        android:name="uz.texnopos.nogironlikhuquqlari.ui.settings.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/pdfViewerFragment"
-        android:name="uz.texnopos.mehrtilsimi.ui.library.PdfViewerFragment"
+        android:name="uz.texnopos.nogironlikhuquqlari.ui.library.PdfViewerFragment"
         android:label="PdfViewerFragment"
         tools:layout="@layout/fragment_pdf_viewer"/>
     <fragment
         android:id="@+id/forReadFragment"
-        android:name="uz.texnopos.mehrtilsimi.ui.reading.ForReadFragment"
+        android:name="uz.texnopos.nogironlikhuquqlari.ui.reading.ForReadFragment"
         android:label="ForReadFragment"
         tools:layout="@layout/fragment_for_read"/>
 

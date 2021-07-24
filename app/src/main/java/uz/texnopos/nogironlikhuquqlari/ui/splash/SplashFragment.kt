@@ -1,4 +1,4 @@
-package uz.texnopos.mehrtilsimi.ui.splash
+package uz.texnopos.nogironlikhuquqlari.ui.splash
 
 import android.animation.Animator
 import android.os.Bundle
@@ -6,8 +6,8 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import uz.texnopos.mehrtilsimi.R
-import uz.texnopos.mehrtilsimi.databinding.FragmentSplashBinding
+import uz.texnopos.nogironlikhuquqlari.R
+import uz.texnopos.nogironlikhuquqlari.databinding.FragmentSplashBinding
 
 class SplashFragment : Fragment(R.layout.fragment_splash) {
 
