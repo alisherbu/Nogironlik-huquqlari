@@ -15,7 +15,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/backIcon"
+                android:id="@+id/back"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:layout_marginStart="8dp"
@@ -35,7 +35,7 @@
                 android:textColor="#fff"
                 android:textSize="@dimen/text_size_toolbar"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/backIcon"
+                app:layout_constraintStart_toEndOf="@id/back"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

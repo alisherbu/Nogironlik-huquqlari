@@ -9,5 +9,9 @@
 Мен материалларды бир тилде өзбек тилиндеги криль хәм латын имласында таярлап қойыпан. Үлгириуимиз мүмкин бе?</string>
     <string name="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industries standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</string>
     <string name="books">Kitoblar</string>
+    <string name="about_owner">G\'oya muallifi</string>
+    <string name="questions">Savol javoblar</string>
+    <string name="rights">Huquqlar</string>
+    <string name="settings">Sozlamalar</string>
 
 </resources>

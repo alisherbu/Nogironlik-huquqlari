@@ -5,6 +5,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import uz.texnopos.nogironlikhuquqlari.R
+import uz.texnopos.nogironlikhuquqlari.core.onClick
 import uz.texnopos.nogironlikhuquqlari.databinding.FragmentQuestionsBinding
 
 class QuestionsFragment : Fragment(R.layout.fragment_questions) {
@@ -16,8 +17,14 @@ class QuestionsFragment : Fragment(R.layout.fragment_questions) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentQuestionsBinding.bind(view)
+        binding.toolbar.toolbarTitle.text=getString(R.string.questions)
         binding.rvQuestions.adapter = adapter
+
 //        viewModel.getData()
+
+        binding.toolbar.back.onClick {
+            requireActivity().onBackPressed()
+        }
     }
 
 }

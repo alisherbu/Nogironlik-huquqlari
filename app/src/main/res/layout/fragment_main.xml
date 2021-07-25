@@ -13,36 +13,8 @@
         tools:context=".ui.main.MainFragment"
         >
 
-        <Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:layout_constraintTop_toTopOf="parent"
-            android:background="@color/toolbar_color"
-            >
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/toolbar_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    android:gravity="center"
-                    android:text="Nogironlik huquqlari"
-                    android:textSize="@dimen/text_size_toolbar"
-                    android:fontFamily="@font/tahoma"
-                    android:layout_marginStart="@dimen/margin_standard"
-                    android:textColor="#fff"
-                    />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </Toolbar>
+        <include android:id="@+id/toolbar"
+            layout="@layout/app_bar_main"/>
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/layout1"
@@ -87,7 +59,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
                         android:gravity="center"
-                        android:text="Goya muallifi"
+                        android:text="@string/about_owner"
                         android:textAllCaps="false"
                         android:textSize="24sp"
                         android:textStyle="bold" />
@@ -130,7 +102,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
                         android:gravity="center"
-                        android:text="Huquqlar"
+                        android:text="@string/rights"
                         android:textAllCaps="false"
                         android:textSize="24sp"
                         android:textStyle="bold" />
@@ -184,7 +156,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
                         android:gravity="center"
-                        android:text="Savol\nJavoblar"
+                        android:text="@string/questions"
                         android:textAllCaps="false"
                         android:textSize="24sp"
                         android:textStyle="bold" />
@@ -227,7 +199,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
                         android:gravity="center"
-                        android:text="Kitoblar"
+                        android:text="@string/books"
                         android:textAllCaps="false"
                         android:textSize="24sp"
                         android:textStyle="bold" />
@@ -280,7 +252,7 @@
                         android:layout_marginStart="25dp"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical"
-                        android:text="Sozlamalar"
+                        android:text="@string/settings"
                         android:textAllCaps="false"
                         android:textSize="24sp"
                         android:textStyle="bold" />

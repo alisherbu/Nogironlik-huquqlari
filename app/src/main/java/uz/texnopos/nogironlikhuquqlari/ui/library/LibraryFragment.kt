@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import uz.texnopos.nogironlikhuquqlari.R
+import uz.texnopos.nogironlikhuquqlari.core.onClick
 import uz.texnopos.nogironlikhuquqlari.data.entities.Book
 import uz.texnopos.nogironlikhuquqlari.databinding.FragmentLibraryBinding
 
@@ -25,6 +26,9 @@ class LibraryFragment : Fragment(R.layout.fragment_library) {
             val bundle = Bundle()
             bundle.putString("book_name", it)
             navController.navigate(R.id.action_libraryFragment_to_pdfViewerFragment, bundle)
+        }
+        bind.toolbar.back.onClick {
+            requireActivity().onBackPressed()
         }
     }
 

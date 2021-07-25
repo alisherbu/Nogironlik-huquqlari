@@ -7,6 +7,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import uz.texnopos.nogironlikhuquqlari.R
+import uz.texnopos.nogironlikhuquqlari.core.onClick
 import uz.texnopos.nogironlikhuquqlari.databinding.FragmentRightsBinding
 
 class RightsFragment : Fragment(R.layout.fragment_rights) {
@@ -17,6 +18,7 @@ class RightsFragment : Fragment(R.layout.fragment_rights) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bind = FragmentRightsBinding.bind(view)
+        bind.toolbar.toolbarTitle.text=getString(R.string.rights)
         navController = Navigation.findNavController(view)
         bind.rvRights.adapter = adapter
         viewModel.getAllRights()
@@ -32,6 +34,9 @@ class RightsFragment : Fragment(R.layout.fragment_rights) {
                 bundle.putString("toolbar_title", it.title)
                 navController.navigate(R.id.action_rightsFragment_to_forReadFragment, bundle)
             }
+        }
+        bind.toolbar.back.onClick {
+            requireActivity().onBackPressed()
         }
     }
 

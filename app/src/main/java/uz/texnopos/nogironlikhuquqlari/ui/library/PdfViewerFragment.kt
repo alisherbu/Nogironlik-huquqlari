@@ -12,6 +12,7 @@ import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle
 import com.shockwave.pdfium.PdfDocument.Bookmark
 import com.shockwave.pdfium.PdfDocument.Meta
 import uz.texnopos.nogironlikhuquqlari.R
+import uz.texnopos.nogironlikhuquqlari.core.onClick
 import uz.texnopos.nogironlikhuquqlari.databinding.FragmentPdfViewerBinding
 
 class PdfViewerFragment : Fragment(R.layout.fragment_pdf_viewer),
@@ -34,6 +35,9 @@ class PdfViewerFragment : Fragment(R.layout.fragment_pdf_viewer),
             .scrollHandle(DefaultScrollHandle(requireContext()))
             .load();
 
+        bind.back.onClick {
+            requireActivity().onBackPressed()
+        }
     }
 
     override fun onPageChanged(page: Int, pageCount: Int) {

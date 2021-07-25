@@ -15,19 +15,18 @@ class AuthorFragment : Fragment(R.layout.fragment_author) {
     lateinit var bind: FragmentAuthorBinding
     lateinit var navController: NavController
     private val adapter = ExpandableAdapter()
-    private var textList = mutableListOf<TextView>()
     private val viewModel by viewModel<AuthorViewModel>()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bind = FragmentAuthorBinding.bind(view)
         viewModel.getAuthorInfo()
-
+        bind.toolbar.toolbarTitle.text=getString(R.string.about_owner)
         bind.recyclerView.adapter = adapter
         bind.recyclerView.setHasFixedSize(true)
         viewModel.authorInfo.observe(requireActivity(), {
             adapter.models = it
         })
-        bind.back.onClick {
+        bind.toolbar.back.onClick {
             requireActivity().onBackPressed()
         }
     }

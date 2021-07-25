@@ -14,6 +14,7 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bind = FragmentSettingsBinding.bind(view)
+        bind.toolbar.toolbarTitle.text=getString(R.string.settings)
         bind.text.textSize = settings.textSize
         bind.currentSize.text = settings.textSize.toInt().toString()
         bind.increment.onClick {
@@ -29,6 +30,9 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
                 bind.text.textSize = settings.textSize
                 bind.currentSize.text = settings.textSize.toInt().toString()
             }
+        }
+        bind.toolbar.back.onClick {
+            requireActivity().onBackPressed()
         }
     }
 
