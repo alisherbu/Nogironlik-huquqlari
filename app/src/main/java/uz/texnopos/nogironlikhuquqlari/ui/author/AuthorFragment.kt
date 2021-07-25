@@ -10,12 +10,12 @@ import uz.texnopos.nogironlikhuquqlari.R
 import uz.texnopos.nogironlikhuquqlari.core.onClick
 import uz.texnopos.nogironlikhuquqlari.databinding.FragmentAuthorBinding
 
-
 class AuthorFragment : Fragment(R.layout.fragment_author) {
+
     lateinit var bind: FragmentAuthorBinding
-    lateinit var navController: NavController
     private val adapter = ExpandableAdapter()
     private val viewModel by viewModel<AuthorViewModel>()
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bind = FragmentAuthorBinding.bind(view)

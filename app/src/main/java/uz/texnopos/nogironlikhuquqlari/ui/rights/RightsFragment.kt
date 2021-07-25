@@ -27,7 +27,7 @@ class RightsFragment : Fragment(R.layout.fragment_rights) {
         })
         adapter.itemOnClick {
             if (it.id == 1) {
-                //Nurlibay jazadi
+                navController.navigate(R.id.action_rightsFragment_to_legislationFragment)
             } else {
                 val bundle = Bundle()
                 bundle.putString("for_read", it.text)

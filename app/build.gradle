@@ -79,7 +79,4 @@ dependencies {
     //pdf
     implementation 'com.github.barteksc:android-pdf-viewer:2.5.1'
 
-    //justify
-    implementation 'com.codesgood:justifiedtextview:1.1.0'
-
 }

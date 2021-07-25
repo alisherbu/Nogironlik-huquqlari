@@ -63,13 +63,20 @@
         <action
             android:id="@+id/action_rightsFragment_to_forReadFragment"
             app:destination="@id/forReadFragment" />
+        <action
+            android:id="@+id/action_rightsFragment_to_legislationFragment"
+            app:destination="@id/legislationFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/questionsFragment"
-        android:name="uz.texnopos.nogironlikhuquqlari.ui.questions.QuestionsFragment"
+        android:name="uz.texnopos.nogironlikhuquqlari.ui.questions.QuestionTitleFragment"
         android:label="fragment_questions"
-        tools:layout="@layout/fragment_questions" />
+        tools:layout="@layout/fragment_question_title" >
+        <action
+            android:id="@+id/action_questionsFragment_to_forReadFragment"
+            app:destination="@id/forReadFragment" />
+    </fragment>
     <fragment
         android:id="@+id/libraryFragment"
         android:name="uz.texnopos.nogironlikhuquqlari.ui.library.LibraryFragment"
@@ -94,5 +101,14 @@
         android:name="uz.texnopos.nogironlikhuquqlari.ui.reading.ForReadFragment"
         android:label="ForReadFragment"
         tools:layout="@layout/fragment_for_read"/>
+    <fragment
+        android:id="@+id/legislationFragment"
+        android:name="uz.texnopos.nogironlikhuquqlari.ui.legislation.LegislationFragment"
+        android:label="fragment_legislation"
+        tools:layout="@layout/fragment_legislation" >
+        <action
+            android:id="@+id/action_legislationFragment_to_forReadFragment"
+            app:destination="@id/forReadFragment" />
+    </fragment>
 
 </navigation>

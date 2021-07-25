@@ -6,20 +6,20 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import uz.texnopos.nogironlikhuquqlari.data.dao.Dao
 import uz.texnopos.nogironlikhuquqlari.data.entities.Author
+import uz.texnopos.nogironlikhuquqlari.data.entities.Legislation
 import uz.texnopos.nogironlikhuquqlari.data.entities.Question
 import uz.texnopos.nogironlikhuquqlari.data.entities.Right
 
-@Database(entities = [Question::class, Author::class, Right::class], version = 1)
-abstract class
-DisibiltyRigthsDatabase: RoomDatabase() {
+@Database(entities = [Question::class, Author::class, Right::class, Legislation::class], version = 2)
+abstract class DisibiltyRigthsDatabase: RoomDatabase() {
     companion object {
         private lateinit var INSTANCE: DisibiltyRigthsDatabase
         fun getInstance(context: Context) : DisibiltyRigthsDatabase {
             if (!Companion::INSTANCE.isInitialized) {
                 INSTANCE = Room.databaseBuilder(
                     context, DisibiltyRigthsDatabase::class.java,
-                    "latin.db")
-                    .createFromAsset("latin.db")
+                    "latin2.db")
+                    .createFromAsset("latin2.db")
                     .allowMainThreadQueries()
                     .build()
             }

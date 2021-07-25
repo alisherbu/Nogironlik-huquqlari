@@ -15,16 +15,15 @@
         app:cardElevation="8dp">
 
         <TextView
-            android:id="@+id/tvQuestion"
+            android:id="@+id/tvLegislation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start|center_vertical"
             android:layout_marginStart="@dimen/margin_standard"
-            android:text="Question Title"
+            android:text="Legislation Title"
+            android:textAllCaps="true"
             android:textSize="18sp"
-            android:textStyle="bold"
-
-            />
+            android:textStyle="bold" />
 
     </androidx.cardview.widget.CardView>
 

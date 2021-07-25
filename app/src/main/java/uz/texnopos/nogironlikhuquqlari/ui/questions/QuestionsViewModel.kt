@@ -9,8 +9,7 @@ import uz.texnopos.nogironlikhuquqlari.data.entities.Question
 class QuestionsViewModel(private val dao: Dao): ViewModel() {
 
     private var mutableQuestions: MutableLiveData<List<Question>> = MutableLiveData()
-    val questions: LiveData<List<Question>>
-    get() = mutableQuestions
+    val questions: LiveData<List<Question>> get() = mutableQuestions
 
     fun getData(){
         mutableQuestions.value = dao.getAllQuestions()

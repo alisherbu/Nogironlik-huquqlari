@@ -13,15 +13,14 @@ import uz.texnopos.nogironlikhuquqlari.databinding.ItemExpandBinding
 
 
 class ExpandableAdapter : RecyclerView.Adapter<ExpandableAdapter.ViewHolder>() {
+
     var last = 0
 
     inner class ViewHolder(private val bind: ItemExpandBinding) :
         RecyclerView.ViewHolder(bind.root) {
         fun populateModel(model: Author, position: Int) {
             createDynamicViews(model.text!!, bind.blockDesc.context, bind.blockDesc)
-            bind.description.movementMethod = LinkMovementMethod.getInstance()
             bind.title.text = model.title
-//        bind.description.text=HtmlCompat.fromHtml(model.text!!,HtmlCompat.FROM_HTML_MODE_COMPACT)
             update(model)
             bind.blockTitle.onClick {
                 model.isExpand = if (model.isExpand == 0) 1 else 0

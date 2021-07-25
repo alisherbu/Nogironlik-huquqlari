@@ -3,14 +3,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="test">Сәлем, Шарапат иним!
-Денсаулықларыңыз жақсыма? Мениң жумысларым жақсы Аллаға шүкирлер болсын.
-Шарапат усы жылдың 9 август күни https://t.me/nogironhuquqi каналыма 2 жыл толады.
-Шарапат мен келеси айда Жаслар орайында Мобиль қосымшасы презентациясыны ислеу нийетим бар.
 Мен материалларды бир тилде өзбек тилиндеги криль хәм латын имласында таярлап қойыпан. Үлгириуимиз мүмкин бе?</string>
-    <string name="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industries standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</string>
+    <string name="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industries standard dummy text ever since the 1500s, when an unknown printer took a
+        galley of type and scrambled it to make a type specimen book</string>
     <string name="books">Kitoblar</string>
-    <string name="about_owner">G\'oya muallifi</string>
     <string name="questions">Savol javoblar</string>
+    <string name="about_owner">G\'oya muallifi</string>
     <string name="rights">Huquqlar</string>
     <string name="settings">Sozlamalar</string>
 
