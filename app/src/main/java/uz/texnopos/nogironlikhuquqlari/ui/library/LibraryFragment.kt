@@ -19,6 +19,7 @@ class LibraryFragment : Fragment(R.layout.fragment_library) {
         navController = Navigation.findNavController(view)
         bind.rvBooks.setHasFixedSize(true)
         bind.rvBooks.adapter = adapter
+        bind.toolbar.toolbarTitle.text = getString(R.string.books)
         setData()
         adapter.itemOnClick {
             val bundle = Bundle()
