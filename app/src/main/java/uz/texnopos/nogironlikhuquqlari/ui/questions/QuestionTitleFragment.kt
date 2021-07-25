@@ -7,6 +7,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import uz.texnopos.nogironlikhuquqlari.R
+import uz.texnopos.nogironlikhuquqlari.core.onClick
 import uz.texnopos.nogironlikhuquqlari.databinding.FragmentQuestionTitleBinding
 
 class QuestionTitleFragment : Fragment(R.layout.fragment_question_title) {
@@ -34,6 +35,9 @@ class QuestionTitleFragment : Fragment(R.layout.fragment_question_title) {
             bundle.putString("for_read", it.text)
             bundle.putString("toolbar_title", it.title)
             navController.navigate(R.id.action_questionsFragment_to_forReadFragment, bundle)
+        }
+        binding.toolbar.back.onClick {
+            requireActivity().onBackPressed()
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.b3nedikt.reword.example
+package uz.texnopos.nogironlikhuquqlari
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate

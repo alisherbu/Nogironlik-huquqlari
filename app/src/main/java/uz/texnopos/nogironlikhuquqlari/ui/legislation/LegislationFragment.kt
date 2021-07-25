@@ -7,6 +7,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import uz.texnopos.nogironlikhuquqlari.R
+import uz.texnopos.nogironlikhuquqlari.core.onClick
 import uz.texnopos.nogironlikhuquqlari.databinding.FragmentLegislationBinding
 
 class LegislationFragment : Fragment(R.layout.fragment_legislation) {
@@ -30,6 +31,9 @@ class LegislationFragment : Fragment(R.layout.fragment_legislation) {
             bundle.putString("for_read", it.text)
             bundle.putString("toolbar_title", it.year.toString())
             navController.navigate(R.id.action_legislationFragment_to_forReadFragment, bundle)
+        }
+        binding.toolbar.back.onClick {
+            requireActivity().onBackPressed()
         }
     }
 }
