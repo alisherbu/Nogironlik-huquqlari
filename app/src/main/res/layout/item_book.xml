@@ -11,6 +11,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_width="224dp"
         app:cardElevation="4dp"
+        android:layout_margin="4dp"
         android:layout_height="320dp"
         >
 

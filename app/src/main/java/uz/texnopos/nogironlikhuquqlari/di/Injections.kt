@@ -10,7 +10,7 @@ import uz.texnopos.nogironlikhuquqlari.ui.settings.Settings
 
 val dataModule = module {
     single { DisibiltyRigthsDatabase.getInstance(androidContext()).dao() }
-    single { Settings(androidContext()) }
+    single { Settings() }
 }
 val viewModelModule = module {
     viewModel { AuthorViewModel(get()) }
