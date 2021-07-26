@@ -7,6 +7,8 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import uz.texnopos.nogironlikhuquqlari.R
+import uz.texnopos.nogironlikhuquqlari.core.Constants.FOR_READ
+import uz.texnopos.nogironlikhuquqlari.core.Constants.TOOLBAR_TITLE
 import uz.texnopos.nogironlikhuquqlari.core.onClick
 import uz.texnopos.nogironlikhuquqlari.databinding.FragmentQuestionTitleBinding
 
@@ -32,8 +34,8 @@ class QuestionTitleFragment : Fragment(R.layout.fragment_question_title) {
 
         adapter.setOnItemClickListener {
             val bundle = Bundle()
-            bundle.putString("for_read", it.text)
-            bundle.putString("toolbar_title", it.title)
+            bundle.putString(FOR_READ, it.text)
+            bundle.putString(TOOLBAR_TITLE, it.title)
             navController.navigate(R.id.action_questionsFragment_to_forReadFragment, bundle)
         }
         binding.toolbar.back.onClick {

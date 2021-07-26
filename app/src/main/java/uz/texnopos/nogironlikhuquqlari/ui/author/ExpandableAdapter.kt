@@ -1,6 +1,5 @@
 package uz.texnopos.nogironlikhuquqlari.ui.author
 
-import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

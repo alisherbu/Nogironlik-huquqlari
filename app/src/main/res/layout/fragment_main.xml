@@ -305,7 +305,7 @@
                         android:layout_marginStart="25dp"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical"
-                        android:text="Saytga o'tish"
+                        android:text="@string/saytga_otish"
                         android:textAllCaps="false"
                         android:textSize="24sp"
                         android:textStyle="bold" />

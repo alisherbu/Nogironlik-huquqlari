@@ -7,6 +7,8 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import uz.texnopos.nogironlikhuquqlari.R
+import uz.texnopos.nogironlikhuquqlari.core.Constants.FOR_READ
+import uz.texnopos.nogironlikhuquqlari.core.Constants.TOOLBAR_TITLE
 import uz.texnopos.nogironlikhuquqlari.core.onClick
 import uz.texnopos.nogironlikhuquqlari.databinding.FragmentRightsBinding
 
@@ -25,13 +27,13 @@ class RightsFragment : Fragment(R.layout.fragment_rights) {
         viewModel.rights.observe(requireActivity(), {
             adapter.models = it
         })
+        val bundle = Bundle()
         adapter.itemOnClick {
+            bundle.putString(TOOLBAR_TITLE, it.title)
             if (it.id == 1) {
-                navController.navigate(R.id.action_rightsFragment_to_legislationFragment)
+                navController.navigate(R.id.action_rightsFragment_to_legislationFragment,bundle)
             } else {
-                val bundle = Bundle()
-                bundle.putString("for_read", it.text)
-                bundle.putString("toolbar_title", it.title)
+                bundle.putString(FOR_READ, it.text)
                 navController.navigate(R.id.action_rightsFragment_to_forReadFragment, bundle)
             }
         }

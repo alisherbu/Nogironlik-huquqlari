@@ -57,4 +57,5 @@ class App:Application() {
             return appInstance
         }
     }
+
 }

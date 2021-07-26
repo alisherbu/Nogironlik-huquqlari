@@ -10,9 +10,8 @@ import uz.texnopos.nogironlikhuquqlari.ui.questions.QuestionsViewModel
 import uz.texnopos.nogironlikhuquqlari.ui.rights.RightViewModel
 import uz.texnopos.nogironlikhuquqlari.ui.settings.Settings
 
-val dataModule = module {
+var dataModule = module {
     single { DisibiltyRigthsDatabase.getInstance(androidContext()).dao() }
-    single { Settings() }
 }
 val viewModelModule = module {
     viewModel { AuthorViewModel(get()) }

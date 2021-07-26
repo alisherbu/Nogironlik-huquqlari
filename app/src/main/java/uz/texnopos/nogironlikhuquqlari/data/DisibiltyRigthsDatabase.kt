@@ -1,9 +1,11 @@
 package uz.texnopos.nogironlikhuquqlari.data
 
 import android.content.Context
+import android.util.Log
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import uz.texnopos.nogironlikhuquqlari.R
 import uz.texnopos.nogironlikhuquqlari.data.dao.Dao
 import uz.texnopos.nogironlikhuquqlari.data.entities.Author
 import uz.texnopos.nogironlikhuquqlari.data.entities.Legislation
@@ -15,14 +17,15 @@ abstract class DisibiltyRigthsDatabase: RoomDatabase() {
     companion object {
         private lateinit var INSTANCE: DisibiltyRigthsDatabase
         fun getInstance(context: Context) : DisibiltyRigthsDatabase {
-            if (!Companion::INSTANCE.isInitialized) {
+            Log.d("database","database calling")
+//            if (!Companion::INSTANCE.isInitialized) {
                 INSTANCE = Room.databaseBuilder(
                     context, DisibiltyRigthsDatabase::class.java,
-                    "latin2.db")
-                    .createFromAsset("latin2.db")
+                    context.getString(R.string.database))
+                    .createFromAsset(context.getString(R.string.database))
                     .allowMainThreadQueries()
                     .build()
-            }
+//            }
             return INSTANCE
         }
     }

@@ -1,14 +1,15 @@
 <resources>
     <string name="app_name">Ногиронлик ҳуқуқлари</string>
+    <string name="database">kirill.db</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="test">Сәлем, Шарапат иним!</string>
-    <string name="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industries standard dummy text ever since the 1500s, when an unknown printer took a
-        galley of type and scrambled it to make a type specimen book</string>
+    <string name="lorem">Лорем Ипсум ис симплй думмй техт оф тҳе принтинг анд тйпесеттинг индустрй. Лорем Ипсум ҳас бэн тҳе индустриес стандард думмй техт эвер синcе тҳе 1500с, wҳен ан ункноwн принтер тоок а
+        галлей оф тйпе анд сcрамблед ит то маке а тйпе спеcимен боок</string>
     <string name="books">Китоблар</string>
     <string name="questions">Савол жавоблар</string>
     <string name="about_owner">Ғоя муаллифи</string>
     <string name="rights">Ҳуқуқлар</string>
     <string name="settings">Созламалар</string>
+    <string name="saytga_otish">Сайтга өтиш</string>
 
 </resources>

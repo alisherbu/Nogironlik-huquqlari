@@ -12,6 +12,7 @@ import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle
 import com.shockwave.pdfium.PdfDocument.Bookmark
 import com.shockwave.pdfium.PdfDocument.Meta
 import uz.texnopos.nogironlikhuquqlari.R
+import uz.texnopos.nogironlikhuquqlari.core.Constants.TAG
 import uz.texnopos.nogironlikhuquqlari.core.onClick
 import uz.texnopos.nogironlikhuquqlari.databinding.FragmentPdfViewerBinding
 
@@ -19,7 +20,6 @@ class PdfViewerFragment : Fragment(R.layout.fragment_pdf_viewer),
     OnPageChangeListener, OnLoadCompleteListener {
     private lateinit var bind: FragmentPdfViewerBinding
     private lateinit var navController: NavController
-    private val TAG = "simple_name"
     var pageNumber = 0
     private lateinit var bookName: String
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

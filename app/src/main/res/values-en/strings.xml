@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">Nogironlik huquqlari</string>
+
+    <string name="database">latin2.db</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="test">Сәлем, Шарапат иним!
-Мен материалларды бир тилде өзбек тилиндеги криль хәм латын имласында таярлап қойыпан. Үлгириуимиз мүмкин бе?</string>
+
     <string name="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industries standard dummy text ever since the 1500s, when an unknown printer took a
         galley of type and scrambled it to make a type specimen book</string>
     <string name="books">Kitoblar</string>
@@ -11,5 +12,6 @@
     <string name="about_owner">G\'oya muallifi</string>
     <string name="rights">Huquqlar</string>
     <string name="settings">Sozlamalar</string>
+    <string name="saytga_otish">Saytga o\'tish</string>
 
 </resources>
