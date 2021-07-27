@@ -17,13 +17,16 @@ class RightsFragment : Fragment(R.layout.fragment_rights) {
     private lateinit var navController: NavController
     private val adapter = RightsAdapter()
     private val viewModel by viewModel<RightViewModel>()
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        viewModel.getAllRights()
+    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bind = FragmentRightsBinding.bind(view)
         bind.toolbar.toolbarTitle.text=getString(R.string.rights)
         navController = Navigation.findNavController(view)
         bind.rvRights.adapter = adapter
-        viewModel.getAllRights()
         viewModel.rights.observe(requireActivity(), {
             adapter.models = it
         })

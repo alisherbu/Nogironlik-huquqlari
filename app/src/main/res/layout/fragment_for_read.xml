@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tvText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -27,7 +27,8 @@
                 android:layout_marginVertical="8dp"
                 android:fontFamily="@font/times"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textColorLink="@color/link_color"/>
 
         </LinearLayout>
 

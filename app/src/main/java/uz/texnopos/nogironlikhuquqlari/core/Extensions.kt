@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.text.HtmlCompat
 import uz.texnopos.nogironlikhuquqlari.App
@@ -62,6 +63,7 @@ fun createDynamicViews(
             textView.layoutParams = params
             textView.textSize = Settings.textSize
             textView.typeface = face
+            textView.setTextColor(ContextCompat.getColor(textView.context,R.color.black))
             textView.movementMethod = LinkMovementMethod.getInstance()
             textView.text = HtmlCompat.fromHtml(
                 string.substring(textPair[i].first, textPair[i].second),
@@ -98,6 +100,7 @@ fun createDynamicViews(
         textView.layoutParams = params
         textView.textSize = Settings.textSize
         textView.typeface = face
+        textView.setTextColor(ContextCompat.getColor(textView.context,R.color.black))
         textView.movementMethod = LinkMovementMethod.getInstance()
         textList.add(textView)
         textView.text = HtmlCompat.fromHtml(

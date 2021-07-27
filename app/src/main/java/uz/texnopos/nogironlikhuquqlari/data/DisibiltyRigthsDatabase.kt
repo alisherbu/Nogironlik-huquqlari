@@ -23,7 +23,6 @@ abstract class DisibiltyRigthsDatabase: RoomDatabase() {
                     context, DisibiltyRigthsDatabase::class.java,
                     context.getString(R.string.database))
                     .createFromAsset(context.getString(R.string.database))
-                    .allowMainThreadQueries()
                     .build()
 //            }
             return INSTANCE

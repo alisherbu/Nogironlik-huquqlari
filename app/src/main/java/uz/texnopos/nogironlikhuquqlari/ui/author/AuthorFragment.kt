@@ -24,7 +24,7 @@ class AuthorFragment : Fragment(R.layout.fragment_author) {
         bind.recyclerView.adapter = adapter
         bind.recyclerView.setHasFixedSize(true)
         viewModel.authorInfo.observe(requireActivity(), {
-            adapter.models = it
+            adapter.models = it!!
         })
         bind.toolbar.back.onClick {
             requireActivity().onBackPressed()
