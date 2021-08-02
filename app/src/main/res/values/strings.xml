@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Nogironlik huquqlari</string>
 
-    <string name="database">latin.db</string>
+    <string name="database">latin3.db</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industries standard dummy text ever since the 1500s, when an unknown printer took a
