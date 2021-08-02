@@ -26,9 +26,9 @@ class App:Application() {
         super.onCreate()
         appInstance =this
         AppLocale.supportedLocales= listOf(LATIN,CYRIL)
-
         // Optional: Persist changes to the desiredLocale to sharedPreferences
         AppLocale.appLocaleRepository = SharedPrefsAppLocaleRepository(this)
+        if (AppLocale.isInitial) AppLocale.desiredLocale= LATIN
 
         ViewPump.init(RewordInterceptor)
 

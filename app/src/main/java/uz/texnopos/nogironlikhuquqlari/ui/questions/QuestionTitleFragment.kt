@@ -18,16 +18,17 @@ class QuestionTitleFragment : Fragment(R.layout.fragment_question_title) {
     private val adapter: QuestionsAdapter = QuestionsAdapter()
     private val viewModel: QuestionsViewModel by viewModel()
     private lateinit var navController: NavController
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        viewModel.getData()
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentQuestionTitleBinding.bind(view)
         navController = Navigation.findNavController(view)
         binding.rvQuestions.adapter = adapter
-        viewModel.getData()
-
         binding.toolbar.toolbarTitle.text = getString(R.string.questions)
-
         viewModel.questions.observe(requireActivity(), {
             adapter.models = it
         })

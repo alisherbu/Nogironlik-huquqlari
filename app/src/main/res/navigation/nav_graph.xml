@@ -14,10 +14,11 @@
         <action
             android:id="@+id/action_splashFragment_to_mainFragment"
             app:destination="@id/mainFragment"
-            app:popUpToInclusive="true"
+            app:enterAnim="@anim/alpha_from_out"
+            app:exitAnim="@anim/alpha_to_in"
             app:launchSingleTop="true"
             app:popUpTo="@id/nav_graph"
-            />
+            app:popUpToInclusive="true" />
 
     </fragment>
 
@@ -29,23 +30,43 @@
 
         <action
             android:id="@+id/action_mainFragment_to_authorFragment"
-            app:destination="@id/authorFragment" />
+            app:destination="@id/authorFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
 
         <action
             android:id="@+id/action_mainFragment_to_questionsFragment"
-            app:destination="@id/questionsFragment" />
+            app:destination="@id/questionsFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
 
         <action
             android:id="@+id/action_mainFragment_to_rightsFragment"
-            app:destination="@id/rightsFragment" />
+            app:destination="@id/rightsFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
 
         <action
             android:id="@+id/action_mainFragment_to_libraryFragment"
-            app:destination="@id/libraryFragment" />
+            app:destination="@id/libraryFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
 
         <action
             android:id="@+id/action_mainFragment_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
 
     </fragment>
 
@@ -62,10 +83,18 @@
         tools:layout="@layout/fragment_rights" >
         <action
             android:id="@+id/action_rightsFragment_to_forReadFragment"
-            app:destination="@id/forReadFragment" />
+            app:destination="@id/forReadFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
         <action
             android:id="@+id/action_rightsFragment_to_legislationFragment"
-            app:destination="@id/legislationFragment" />
+            app:destination="@id/legislationFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
     </fragment>
 
     <fragment
@@ -75,7 +104,11 @@
         tools:layout="@layout/fragment_question_title" >
         <action
             android:id="@+id/action_questionsFragment_to_forReadFragment"
-            app:destination="@id/forReadFragment" />
+            app:destination="@id/forReadFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
     </fragment>
     <fragment
         android:id="@+id/libraryFragment"
@@ -84,7 +117,11 @@
         tools:layout="@layout/fragment_library" >
         <action
             android:id="@+id/action_libraryFragment_to_pdfViewerFragment"
-            app:destination="@id/pdfViewerFragment" />
+            app:destination="@id/pdfViewerFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
@@ -108,7 +145,11 @@
         tools:layout="@layout/fragment_legislation" >
         <action
             android:id="@+id/action_legislationFragment_to_forReadFragment"
-            app:destination="@id/forReadFragment" />
+            app:destination="@id/forReadFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
     </fragment>
 
 </navigation>

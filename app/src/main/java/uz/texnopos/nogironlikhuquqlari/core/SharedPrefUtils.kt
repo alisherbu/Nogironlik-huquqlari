@@ -5,7 +5,7 @@ import android.content.SharedPreferences
 import uz.texnopos.nogironlikhuquqlari.App.Companion.getAppInstance
 import uz.texnopos.nogironlikhuquqlari.core.Constants.myPreferences
 
-class SharedPrefUtils() {
+class SharedPrefUtils {
     private val mSharedPreferences: SharedPreferences = getAppInstance()
         .getSharedPreferences(myPreferences, Context.MODE_PRIVATE)
     private var mSharedPreferencesEditor: SharedPreferences.Editor = mSharedPreferences.edit()

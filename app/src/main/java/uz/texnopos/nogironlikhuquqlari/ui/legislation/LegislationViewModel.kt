@@ -1,5 +1,6 @@
 package uz.texnopos.nogironlikhuquqlari.ui.legislation
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -16,7 +17,9 @@ class LegislationViewModel(private val dao: Dao): ViewModel() {
     val legislation: LiveData<List<Legislation>> get() = mutableLegislation
 
     fun getData(){
+
         CoroutineScope(Dispatchers.Main).launch {
+
             mutableLegislation.value= withContext(Dispatchers.IO){ dao.getAllLegislation()}
         }
     }

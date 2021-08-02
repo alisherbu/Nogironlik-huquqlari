@@ -3,6 +3,7 @@ package uz.texnopos.nogironlikhuquqlari.ui.questions
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import uz.texnopos.nogironlikhuquqlari.R
 import uz.texnopos.nogironlikhuquqlari.core.onClick
 import uz.texnopos.nogironlikhuquqlari.data.entities.Question
 import uz.texnopos.nogironlikhuquqlari.databinding.ItemQuestionBinding
@@ -11,6 +12,7 @@ class QuestionsAdapter : RecyclerView.Adapter<QuestionsAdapter.QuestionsViewHold
 
     inner class QuestionsViewHolder(private val binding: ItemQuestionBinding) : RecyclerView.ViewHolder(binding.root) {
         fun populateModel(question: Question) {
+            binding.orderNumber.text=binding.root.context.getString(R.string.order,question.id)
             binding.tvQuestion.text = question.title
             binding.cardView.onClick {
                 onClick.invoke(question)

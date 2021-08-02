@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Nogironlik huquqlari</string>
 
-    <string name="database">latin2.db</string>
+    <string name="database">latin.db</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
@@ -13,5 +13,7 @@
     <string name="rights">Huquqlar</string>
     <string name="settings">Sozlamalar</string>
     <string name="saytga_otish">Saytga o\'tish</string>
+    <string name="order">%1$d. </string>
+    <string name="for_read">%1$s </string>
 
 </resources>

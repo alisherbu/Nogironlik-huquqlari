@@ -3,6 +3,7 @@ package uz.texnopos.nogironlikhuquqlari.ui.author
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.RecyclerView
 import uz.texnopos.nogironlikhuquqlari.R
 import uz.texnopos.nogironlikhuquqlari.core.createDynamicViews

@@ -23,13 +23,15 @@
                 android:id="@+id/tvText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/margin_standard"
+                android:paddingHorizontal="@dimen/margin_standard"
                 android:layout_marginVertical="8dp"
                 android:fontFamily="@font/times"
                 android:textColor="@color/black"
                 android:textSize="20sp"
+                android:selectAllOnFocus="false"
+                android:textIsSelectable="true"
+                android:text="@string/for_read"
                 android:textColorLink="@color/link_color"/>
-
         </LinearLayout>
 
     </ScrollView>

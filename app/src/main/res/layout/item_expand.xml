@@ -28,8 +28,9 @@
                 android:layout_marginStart="@dimen/margin_standard"
                 android:layout_centerVertical="true"
                 android:text="About myself"
+                android:fontFamily="@font/tahoma"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="@dimen/text_size_20" />
 
             <ImageView
                 android:id="@+id/expand"

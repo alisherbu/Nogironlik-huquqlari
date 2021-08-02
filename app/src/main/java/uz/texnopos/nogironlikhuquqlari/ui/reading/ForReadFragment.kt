@@ -1,5 +1,7 @@
 package uz.texnopos.nogironlikhuquqlari.ui.reading
 
+import android.graphics.text.LineBreaker.JUSTIFICATION_MODE_INTER_WORD
+import android.os.Build
 import android.os.Bundle
 import android.text.method.LinkMovementMethod
 import android.view.View
@@ -23,13 +25,15 @@ class ForReadFragment : Fragment(R.layout.fragment_for_read) {
         super.onViewCreated(view, savedInstanceState)
         bind = FragmentForReadBinding.bind(view)
         navController = Navigation.findNavController(view)
-
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+//            bind.tvText.justificationMode = JUSTIFICATION_MODE_INTER_WORD
+//        }
         val title = arguments?.getString(TOOLBAR_TITLE)
         val text = arguments?.getString(FOR_READ)
-
+        val fromHtml=HtmlCompat.fromHtml(text!!, HtmlCompat.FROM_HTML_MODE_LEGACY)
         bind.toolbar.toolbarTitle.text = if (title!!.length > 20) "${title.substring(0, 20)}..." else title
         bind.tvText.textSize=Settings.textSize
-        bind.tvText.text = HtmlCompat.fromHtml(text!!, HtmlCompat.FROM_HTML_MODE_LEGACY)
+        bind.tvText.text = fromHtml
         bind.tvText.movementMethod = LinkMovementMethod.getInstance()
 
         bind.toolbar.back.onClick {

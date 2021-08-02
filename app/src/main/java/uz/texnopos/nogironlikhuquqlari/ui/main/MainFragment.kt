@@ -19,8 +19,6 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentMainBinding.bind(view)
         navController = Navigation.findNavController(view)
-        binding.toolbar.toolbarTitle.text=getString(R.string.app_name)
-        binding.toolbar.back.visibility=View.INVISIBLE
         binding.btnIdeaAuthor.setOnClickListener {
             navController.navigate(R.id.action_mainFragment_to_authorFragment)
         }
