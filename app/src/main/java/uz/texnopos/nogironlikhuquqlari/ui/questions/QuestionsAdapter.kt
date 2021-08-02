@@ -15,7 +15,9 @@ class QuestionsAdapter : RecyclerView.Adapter<QuestionsAdapter.QuestionsViewHold
             binding.orderNumber.text=binding.root.context.getString(R.string.order,question.id)
             binding.tvQuestion.text = question.title
             binding.cardView.onClick {
-                onClick.invoke(question)
+                try{
+                    onClick.invoke(question)
+                }catch (e:Exception){}
             }
         }
     }

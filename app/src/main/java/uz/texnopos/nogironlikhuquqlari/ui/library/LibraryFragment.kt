@@ -32,7 +32,7 @@ class LibraryFragment : Fragment(R.layout.fragment_library) {
         }
     }
 
-    fun setData() {
+    private fun setData() {
         val books = mutableListOf<Book>()
         for (i in 1..8) {
             books.add(Book("book_$i"))

@@ -3,25 +3,16 @@ package uz.texnopos.nogironlikhuquqlari.ui.settings
 import android.graphics.text.LineBreaker.JUSTIFICATION_MODE_INTER_WORD
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.ArrayAdapter
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import dev.b3nedikt.app_locale.AppLocale
 import org.koin.android.ext.android.getKoin
-import org.koin.android.ext.koin.androidContext
-import org.koin.android.ext.koin.androidFileProperties
-import org.koin.android.ext.koin.androidLogger
-import org.koin.core.context.startKoin
-import org.koin.core.context.stopKoin
 import uz.texnopos.nogironlikhuquqlari.R
 import uz.texnopos.nogironlikhuquqlari.core.Constants.CYRIL
-import uz.texnopos.nogironlikhuquqlari.core.Constants.LATIN
 import uz.texnopos.nogironlikhuquqlari.core.onClick
 import uz.texnopos.nogironlikhuquqlari.databinding.FragmentSettingsBinding
 import uz.texnopos.nogironlikhuquqlari.di.dataModule
-import java.util.*
 
 class SettingsFragment : Fragment(R.layout.fragment_settings) {
     private lateinit var bind: FragmentSettingsBinding

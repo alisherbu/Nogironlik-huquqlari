@@ -16,7 +16,9 @@ class LibraryAdapter : RecyclerView.Adapter<LibraryAdapter.ItemViewHolder>() {
             )
 
             bind.bookImage.onClick {
-                onClick.invoke(book.bookName)
+                try{
+                    onClick.invoke(book.bookName)
+                }catch (e:Exception){}
             }
         }
     }

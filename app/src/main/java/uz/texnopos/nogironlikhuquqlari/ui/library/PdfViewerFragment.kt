@@ -20,7 +20,7 @@ class PdfViewerFragment : Fragment(R.layout.fragment_pdf_viewer),
     OnPageChangeListener, OnLoadCompleteListener {
     private lateinit var bind: FragmentPdfViewerBinding
     private lateinit var navController: NavController
-    var pageNumber = 0
+    private var pageNumber = 0
     private lateinit var bookName: String
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -33,7 +33,7 @@ class PdfViewerFragment : Fragment(R.layout.fragment_pdf_viewer),
             .enableAnnotationRendering(true)
             .onLoad(this)
             .scrollHandle(DefaultScrollHandle(requireContext()))
-            .load();
+            .load()
 
         bind.back.onClick {
             requireActivity().onBackPressed()

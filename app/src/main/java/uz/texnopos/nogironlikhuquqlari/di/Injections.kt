@@ -8,7 +8,6 @@ import uz.texnopos.nogironlikhuquqlari.ui.author.AuthorViewModel
 import uz.texnopos.nogironlikhuquqlari.ui.legislation.LegislationViewModel
 import uz.texnopos.nogironlikhuquqlari.ui.questions.QuestionsViewModel
 import uz.texnopos.nogironlikhuquqlari.ui.rights.RightViewModel
-import uz.texnopos.nogironlikhuquqlari.ui.settings.Settings
 
 var dataModule = module {
     single { DisibiltyRigthsDatabase.getInstance(androidContext()).dao() }

@@ -14,7 +14,6 @@ abstract class BaseActivity : AppCompatActivity() {
                 wrapContext = { baseContext -> AppLocale.wrap(baseContext) }
         )
     }
-
     override fun getDelegate(): AppCompatDelegate {
         return appCompatDelegate
     }

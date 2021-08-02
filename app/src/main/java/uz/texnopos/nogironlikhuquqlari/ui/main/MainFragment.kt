@@ -19,31 +19,53 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentMainBinding.bind(view)
         navController = Navigation.findNavController(view)
+
+
+
         binding.btnIdeaAuthor.setOnClickListener {
-            navController.navigate(R.id.action_mainFragment_to_authorFragment)
+            try {
+                navController.navigate(R.id.action_mainFragment_to_authorFragment)
+            } catch (e: Exception) {
+            }
         }
 
         binding.btnRights.setOnClickListener {
-            navController.navigate(R.id.action_mainFragment_to_rightsFragment)
+            try {
+                navController.navigate(R.id.action_mainFragment_to_rightsFragment)
+            } catch (e: Exception) {
+            }
         }
 
         binding.btnQuestions.setOnClickListener {
-            navController.navigate(R.id.action_mainFragment_to_questionsFragment)
+            try {
+                navController.navigate(R.id.action_mainFragment_to_questionsFragment)
+            } catch (e: Exception) {
+            }
         }
 
         binding.btnLibrary.setOnClickListener {
-            navController.navigate(R.id.action_mainFragment_to_libraryFragment)
+            try {
+                navController.navigate(R.id.action_mainFragment_to_libraryFragment)
+            } catch (e: Exception) {
+            }
         }
 
         binding.btnSettings.setOnClickListener {
-            navController.navigate(R.id.action_mainFragment_to_settingsFragment)
+            try {
+                navController.navigate(R.id.action_mainFragment_to_settingsFragment)
+            } catch (e: Exception) {
+            }
         }
-
 
         binding.btnGoToSite.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://mehrtilsimi.blogspot.com/"))
-            startActivity(intent)
+            val intent =
+                Intent(Intent.ACTION_VIEW, Uri.parse("https://mehrtilsimi.blogspot.com/"))
+            try {
+                startActivity(intent)
+            } catch (e: Exception) {
+            }
         }
+
     }
 
 }

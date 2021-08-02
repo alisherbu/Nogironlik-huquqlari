@@ -39,9 +39,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@color/parent_background"
+        android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        android:scrollbars="none">
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -80,7 +80,8 @@
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:layout_margin="8dp"
-                            android:src="@drawable/idea" />
+                            android:src="@drawable/idea"
+                            android:contentDescription="@string/app_name" />
 
                         <TextView
                             android:id="@+id/tvIdea"
@@ -120,7 +121,8 @@
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:layout_margin="8dp"
-                            android:src="@drawable/rights" />
+                            android:src="@drawable/rights"
+                            android:contentDescription="@string/app_name" />
 
                         <TextView
                             android:id="@+id/tvRights"
@@ -173,7 +175,8 @@
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:layout_margin="8dp"
-                            android:src="@drawable/questions" />
+                            android:src="@drawable/questions"
+                            android:contentDescription="@string/app_name" />
 
                         <TextView
                             android:id="@+id/tvQuestion"
@@ -209,6 +212,7 @@
                         android:orientation="vertical">
 
                         <ImageView
+                            android:contentDescription="@string/app_name"
                             android:id="@+id/booksIcon"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
@@ -260,23 +264,25 @@
                             android:id="@+id/settingsIcon"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
-                            android:layout_marginHorizontal="16dp"
                             android:src="@drawable/settings"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@id/tvSettings"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.20"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:contentDescription="@string/app_name" />
 
                         <TextView
                             android:id="@+id/tvSettings"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="16dp"
                             android:fontFamily="@font/tahoma"
                             android:text="@string/settings"
                             android:textSize="24sp"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/settingsIcon"
                             app:layout_constraintTop_toTopOf="parent" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -309,26 +315,28 @@
                         android:orientation="horizontal">
 
                         <ImageView
+                            android:contentDescription="@string/app_name"
                             android:id="@+id/tvSiteIcon"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
-                            android:layout_marginHorizontal="16dp"
                             android:src="@drawable/site"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@id/tvSite"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.20"
+                            app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
                             android:id="@+id/tvSite"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="16dp"
                             android:fontFamily="@font/tahoma"
                             android:text="@string/saytga_otish"
                             android:textSize="24sp"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/tvSiteIcon"
                             app:layout_constraintTop_toTopOf="parent" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>

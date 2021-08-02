@@ -11,7 +11,6 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.text.HtmlCompat
-import uz.texnopos.nogironlikhuquqlari.App
 import uz.texnopos.nogironlikhuquqlari.App.Companion.sharedPrefUtils
 import uz.texnopos.nogironlikhuquqlari.R
 import uz.texnopos.nogironlikhuquqlari.ui.settings.Settings
@@ -50,7 +49,7 @@ fun createDynamicViews(
     }
     textPair.add(Pair(i2 + 1, string.length - 1))
     /////////////////////////////////////////////////////////////////////////////////
-    for (i in 0 until textPair.size-1) {
+    for (i in 0 until textPair.size - 1) {
         if (textPair[i].first < textPair[i].second) {
             val textView = TextView(context)
             textList.add(textView)
@@ -63,13 +62,13 @@ fun createDynamicViews(
             textView.layoutParams = params
             textView.textSize = Settings.textSize
             textView.typeface = face
-            textView.setTextColor(ContextCompat.getColor(textView.context,R.color.black))
+            textView.setTextColor(ContextCompat.getColor(textView.context, R.color.black))
             textView.movementMethod = LinkMovementMethod.getInstance()
             textView.text = HtmlCompat.fromHtml(
                 string.substring(textPair[i].first, textPair[i].second),
                 HtmlCompat.FROM_HTML_MODE_COMPACT
             )
-             linearLayout.addView(textView)
+            linearLayout.addView(textView)
         }
         if (imagePair[i].first < imagePair[i].second) {
             val imageView = ImageView(context)
@@ -100,18 +99,13 @@ fun createDynamicViews(
         textView.layoutParams = params
         textView.textSize = Settings.textSize
         textView.typeface = face
-        textView.setTextColor(ContextCompat.getColor(textView.context,R.color.black))
+        textView.setTextColor(ContextCompat.getColor(textView.context, R.color.black))
         textView.movementMethod = LinkMovementMethod.getInstance()
         textList.add(textView)
         textView.text = HtmlCompat.fromHtml(
             string.substring(textPair[i].first, textPair[i].second),
             HtmlCompat.FROM_HTML_MODE_COMPACT
         )
-       if(textView.text.isNotEmpty()) linearLayout.addView(textView)
+        if (textView.text.isNotEmpty()) linearLayout.addView(textView)
     }
-}
-
-private fun getWidth(): Int {
-    val display = Resources.getSystem().displayMetrics
-    return display.widthPixels
 }
