@@ -65,4 +65,8 @@ class PdfViewerFragment : Fragment(R.layout.fragment_pdf_viewer),
             if (b.hasChildren()) printBookmarksTree(b.children, "$sep-")
         }
     }
+    override fun onDestroy() {
+        super.onDestroy()
+        requireContext().cacheDir.deleteRecursively()
+    }
 }

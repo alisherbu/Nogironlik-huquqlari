@@ -62,6 +62,8 @@ fun createDynamicViews(
             textView.layoutParams = params
             textView.textSize = Settings.textSize
             textView.typeface = face
+            textView.linkTextColors
+            textView.setLinkTextColor(ContextCompat.getColor(textView.context,R.color.toolbar_color))
             textView.setTextColor(ContextCompat.getColor(textView.context, R.color.black))
             textView.movementMethod = LinkMovementMethod.getInstance()
             textView.text = HtmlCompat.fromHtml(
@@ -99,6 +101,7 @@ fun createDynamicViews(
         textView.layoutParams = params
         textView.textSize = Settings.textSize
         textView.typeface = face
+        textView.setLinkTextColor(ContextCompat.getColor(textView.context,R.color.toolbar_color))
         textView.setTextColor(ContextCompat.getColor(textView.context, R.color.black))
         textView.movementMethod = LinkMovementMethod.getInstance()
         textList.add(textView)

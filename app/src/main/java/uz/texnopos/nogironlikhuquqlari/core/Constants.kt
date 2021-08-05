@@ -10,4 +10,5 @@ const val myPreferences="MySharedPreferences"
     const val TAG = "simple_name"
     val LATIN=Locale("en","")
     val CYRIL=Locale("ru","")
+    const val FIRST_LAUNCH="first"
 }

@@ -1,17 +1,15 @@
 <resources>
     <string name="app_name">Ногиронлик ҳуқуқлари</string>
-    <string name="database">kirill3.db</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="lorem">Лорем Ипсум ис симплй думмй техт оф тҳе принтинг анд тйпесеттинг индустрй. Лорем Ипсум ҳас бэн тҳе индустриес стандард думмй техт эвер синcе тҳе 1500с, wҳен ан ункноwн принтер тоок а
-        галлей оф тйпе анд сcрамблед ит то маке а тйпе спеcимен боок</string>
+    <string name="database">kirill8.db</string>
+    <string name="about">Ушбу мобил илова <a href="https://t.me/texnopos"><u>TexnoPOS</u></a> ИТ мактаби ўқувчилари <a href="https://t.me/Nurlibay_0805"><u>Кўшкинбаев Нурлыбай</u></a> ва <a href="https://t.me/alisherdev"><u>Казакбаев Алишер</u></a> томонидан ишлаб чиқилди.</string>
     <string name="books">Китоблар</string>
     <string name="questions">Савол жавоблар</string>
     <string name="about_owner">Ғоя муаллифи</string>
     <string name="rights">Ҳуқуқлар</string>
     <string name="settings">Созламалар</string>
-    <string name="saytga_otish">Сайтга өтиш</string>
+    <string name="saytga_otish">Сайтга ўтиш</string>
     <string name="order">%1$d. </string>
     <string name="for_read">%1$s </string>
+    <string name="select_locaole">Dastur imlosini tanlang</string>
 
 </resources>

@@ -1,9 +1,11 @@
 package uz.texnopos.nogironlikhuquqlari
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.app.ViewPumpAppCompatDelegate
 import dev.b3nedikt.app_locale.AppLocale
+import java.io.File
 
 abstract class BaseActivity : AppCompatActivity() {
 
@@ -17,4 +19,4 @@ abstract class BaseActivity : AppCompatActivity() {
     override fun getDelegate(): AppCompatDelegate {
         return appCompatDelegate
     }
-}
+    }

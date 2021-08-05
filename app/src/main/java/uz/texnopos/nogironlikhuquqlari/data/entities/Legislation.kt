@@ -7,6 +7,6 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "qonunchilik_sohalari")
 data class Legislation(
     @PrimaryKey val id: Int,
-    @ColumnInfo(name = "year") var year: Int,
+    @ColumnInfo(name = "year") var year: String,
     @ColumnInfo(name = "text") var text: String
 )

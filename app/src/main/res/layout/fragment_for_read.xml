@@ -31,7 +31,7 @@
                 android:selectAllOnFocus="false"
                 android:textIsSelectable="true"
                 android:text="@string/for_read"
-                android:textColorLink="@color/link_color"/>
+                android:textColorLink="@color/toolbar_color"/>
         </LinearLayout>
 
     </ScrollView>

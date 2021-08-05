@@ -1,12 +1,9 @@
 <resources>
     <string name="app_name">Nogironlik huquqlari</string>
 
-    <string name="database">latin3.db</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="database">latin6.db</string>
 
-    <string name="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industries standard dummy text ever since the 1500s, when an unknown printer took a
-        galley of type and scrambled it to make a type specimen book</string>
+    <string name="about">Ushbu mobil ilova <a href="https://t.me/texnopos"><u>TexnoPOS</u></a> IT maktabi o\'quvchilari <a href="https://t.me/Nurlibay_0805"><u>Ko\'shkinbaev Nurlıbay</u></a> va <a href="https://t.me/alisherdev"><u>Kazakbaev Alisher</u></a> tomonidan ishlab chiqildi.</string>
     <string name="books">Kitoblar</string>
     <string name="questions">Savol javoblar</string>
     <string name="about_owner">G\'oya muallifi</string>
@@ -15,5 +12,6 @@
     <string name="saytga_otish">Saytga o\'tish</string>
     <string name="order">%1$d. </string>
     <string name="for_read">%1$s </string>
+    <string name="select_locaole">Dastur imlosini tanlang</string>
 
 </resources>

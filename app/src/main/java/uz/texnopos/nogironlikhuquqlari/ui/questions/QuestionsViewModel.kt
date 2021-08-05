@@ -19,5 +19,5 @@ class QuestionsViewModel(private val dao: Dao): ViewModel() {
         CoroutineScope(Dispatchers.Main).launch{
             mutableQuestions.value= withContext(Dispatchers.IO){ dao.getAllQuestions() }
         }
-    } 
+    }
 }

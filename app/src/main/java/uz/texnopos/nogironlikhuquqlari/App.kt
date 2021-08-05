@@ -18,17 +18,18 @@ import uz.texnopos.nogironlikhuquqlari.di.dataModule
 import uz.texnopos.nogironlikhuquqlari.di.viewModelModule
 import java.util.*
 
-class App:Application() {
+class App : Application() {
     private val modules = listOf(
-         viewModelModule, dataModule
+        viewModelModule, dataModule
     )
+
     override fun onCreate() {
         super.onCreate()
-        appInstance =this
-        AppLocale.supportedLocales= listOf(LATIN,CYRIL)
+        appInstance = this
+        AppLocale.supportedLocales = listOf(LATIN, CYRIL)
         // Optional: Persist changes to the desiredLocale to sharedPreferences
         AppLocale.appLocaleRepository = SharedPrefsAppLocaleRepository(this)
-        if (AppLocale.isInitial) AppLocale.desiredLocale= LATIN
+        if (AppLocale.isInitial) AppLocale.desiredLocale = LATIN
 
         ViewPump.init(RewordInterceptor)
 
@@ -57,5 +58,6 @@ class App:Application() {
             return appInstance
         }
     }
+
 
 }

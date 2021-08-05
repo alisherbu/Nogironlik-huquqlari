@@ -37,6 +37,10 @@ class SharedPrefUtils {
     fun getFloatValue(key: String, defaultValue: Float): Float {
         return mSharedPreferences.getFloat(key,defaultValue)
     }
+    fun getBooleanValue(key:String,defaultValue: Boolean):Boolean{
+        return mSharedPreferences.getBoolean(key,defaultValue)
+    }
+
     fun clear() {
         mSharedPreferencesEditor.clear().apply()
     }
