@@ -13,8 +13,8 @@
     <string name="order">%1$d. </string>
     <string name="for_read">%1$s </string>
     <string name="select_locaole">Dastur imlosini tanlang</string>
-    <string name="lotin">Lotin</string>
-    <string name="cyril">Кирилл</string>
-    <string name="_22">22</string>
+    <string name="lotin" translatable="false">Lotin</string>
+    <string name="cyril" translatable="false">Кирилл</string>
+    <string name="_22" translatable="false">22</string>
 
 </resources>
