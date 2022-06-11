@@ -12,6 +12,7 @@
         layout="@layout/app_bar_main" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:scrollbars="vertical"
         android:id="@+id/rvQuestions"
         android:layout_width="match_parent"
         android:layout_height="0dp"

@@ -12,6 +12,7 @@ import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle
 import com.shockwave.pdfium.PdfDocument.Bookmark
 import com.shockwave.pdfium.PdfDocument.Meta
 import uz.texnopos.nogironlikhuquqlari.R
+import uz.texnopos.nogironlikhuquqlari.core.Constants.TAG
 import uz.texnopos.nogironlikhuquqlari.core.onClick
 import uz.texnopos.nogironlikhuquqlari.databinding.FragmentPdfViewerBinding
 
@@ -19,8 +20,7 @@ class PdfViewerFragment : Fragment(R.layout.fragment_pdf_viewer),
     OnPageChangeListener, OnLoadCompleteListener {
     private lateinit var bind: FragmentPdfViewerBinding
     private lateinit var navController: NavController
-    private val TAG = "simple_name"
-    var pageNumber = 0
+    private var pageNumber = 0
     private lateinit var bookName: String
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -33,7 +33,7 @@ class PdfViewerFragment : Fragment(R.layout.fragment_pdf_viewer),
             .enableAnnotationRendering(true)
             .onLoad(this)
             .scrollHandle(DefaultScrollHandle(requireContext()))
-            .load();
+            .load()
 
         bind.back.onClick {
             requireActivity().onBackPressed()
@@ -64,5 +64,9 @@ class PdfViewerFragment : Fragment(R.layout.fragment_pdf_viewer),
             Log.e(TAG, String.format("%s %s, p %d", sep, b.title, b.pageIdx))
             if (b.hasChildren()) printBookmarksTree(b.children, "$sep-")
         }
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        requireContext().cacheDir.deleteRecursively()
     }
 }

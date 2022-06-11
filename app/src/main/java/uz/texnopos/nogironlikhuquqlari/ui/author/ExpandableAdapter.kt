@@ -1,6 +1,5 @@
 package uz.texnopos.nogironlikhuquqlari.ui.author
 
-import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,13 +17,16 @@ class ExpandableAdapter : RecyclerView.Adapter<ExpandableAdapter.ViewHolder>() {
 
     inner class ViewHolder(private val bind: ItemExpandBinding) :
         RecyclerView.ViewHolder(bind.root) {
-        fun populateModel(model: Author, position: Int) {
+        fun populateModel(model: Author) {
             createDynamicViews(model.text!!, bind.blockDesc.context, bind.blockDesc)
             bind.title.text = model.title
             update(model)
             bind.blockTitle.onClick {
-                model.isExpand = if (model.isExpand == 0) 1 else 0
-                update(model)
+                try {
+                    model.isExpand = if (model.isExpand == 0) 1 else 0
+                    update(model)
+                } catch (e: Exception) {
+                }
             }
         }
 
@@ -51,7 +53,7 @@ class ExpandableAdapter : RecyclerView.Adapter<ExpandableAdapter.ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.populateModel(models[position], position)
+        holder.populateModel(models[position])
     }
 
     override fun getItemCount() = models.size

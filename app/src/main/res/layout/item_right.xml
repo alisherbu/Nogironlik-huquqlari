@@ -22,8 +22,8 @@
             android:layout_gravity="start|center_vertical"
             android:layout_marginStart="@dimen/margin_standard"
             android:text="Right Title"
-            android:textAllCaps="true"
-            android:textSize="18sp"
+            android:fontFamily="@font/tahoma"
+            android:textSize="@dimen/text_size_20"
             android:textStyle="bold" />
 
     </androidx.cardview.widget.CardView>

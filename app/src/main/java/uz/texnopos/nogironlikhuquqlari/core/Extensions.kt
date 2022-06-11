@@ -4,13 +4,16 @@ import android.content.Context
 import android.content.res.Resources
 import android.text.method.LinkMovementMethod
 import android.view.View
+import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.text.HtmlCompat
 import uz.texnopos.nogironlikhuquqlari.App.Companion.sharedPrefUtils
 import uz.texnopos.nogironlikhuquqlari.R
+import uz.texnopos.nogironlikhuquqlari.ui.settings.Settings
 
 inline fun <T : View> T.onClick(crossinline func: T.() -> Unit) = setOnClickListener { func() }
 fun getSharedPreferences(): SharedPrefUtils {
@@ -57,8 +60,11 @@ fun createDynamicViews(
                 )
             params.setMargins(16.dp, 16.dp, 16.dp, 16.dp)
             textView.layoutParams = params
-            textView.textSize = 20f
+            textView.textSize = Settings.textSize
             textView.typeface = face
+            textView.linkTextColors
+            textView.setLinkTextColor(ContextCompat.getColor(textView.context,R.color.toolbar_color))
+            textView.setTextColor(ContextCompat.getColor(textView.context, R.color.black))
             textView.movementMethod = LinkMovementMethod.getInstance()
             textView.text = HtmlCompat.fromHtml(
                 string.substring(textPair[i].first, textPair[i].second),
@@ -69,8 +75,8 @@ fun createDynamicViews(
         if (imagePair[i].first < imagePair[i].second) {
             val imageView = ImageView(context)
             val params: LinearLayout.LayoutParams =
-                LinearLayout.LayoutParams(getWidth() - 32.dp, ((getWidth() - 32.dp) * 1.52).toInt())
-            params.setMargins(16.dp, 16.dp, 16.dp, 16.dp)
+                LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 300.dp)
+            params.setMargins(16.dp, 0.dp, 16.dp, 0.dp)
             imageView.layoutParams = params
             val id = context.resources.getIdentifier(
                 string.substring(
@@ -78,7 +84,8 @@ fun createDynamicViews(
                     imagePair[i].second
                 ), "drawable", context.packageName
             )
-            imageView.setBackgroundResource(id)
+//            imageView.scaleType = ImageView.ScaleType.FIT_XY
+            imageView.setImageResource(id)
             linearLayout.addView(imageView)
         }
     }
@@ -90,22 +97,18 @@ fun createDynamicViews(
                 LinearLayout.LayoutParams.WRAP_CONTENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT
             )
-        params.setMargins(16.dp, 16.dp, 16.dp, 16.dp)
+        params.setMargins(16.dp, 8.dp, 16.dp, 8.dp)
         textView.layoutParams = params
-        textView.textSize = 20f
+        textView.textSize = Settings.textSize
         textView.typeface = face
+        textView.setLinkTextColor(ContextCompat.getColor(textView.context,R.color.toolbar_color))
+        textView.setTextColor(ContextCompat.getColor(textView.context, R.color.black))
         textView.movementMethod = LinkMovementMethod.getInstance()
         textList.add(textView)
         textView.text = HtmlCompat.fromHtml(
             string.substring(textPair[i].first, textPair[i].second),
             HtmlCompat.FROM_HTML_MODE_COMPACT
         )
-        linearLayout.addView(textView)
+        if (textView.text.isNotEmpty()) linearLayout.addView(textView)
     }
-
-}
-
-private fun getWidth(): Int {
-    val display = Resources.getSystem().displayMetrics
-    return display.widthPixels
 }

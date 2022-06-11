@@ -28,8 +28,9 @@
                 android:layout_marginStart="@dimen/margin_standard"
                 android:layout_centerVertical="true"
                 android:text="About myself"
+                android:fontFamily="@font/tahoma"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="@dimen/text_size_20" />
 
             <ImageView
                 android:id="@+id/expand"
@@ -54,17 +55,6 @@
                 android:layout_marginHorizontal="@dimen/margin_standard"
                 android:background="@color/black" />
 
-            <TextView
-                android:id="@+id/description"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:linksClickable="true"
-                android:clickable="false"
-                android:textColor="@color/black"
-                android:fontFamily="@font/times"
-                android:layout_marginVertical="8dp"
-                android:layout_marginHorizontal="@dimen/margin_standard" />
         </LinearLayout>
 
     </LinearLayout>

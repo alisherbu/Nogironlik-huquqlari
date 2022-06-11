@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Nogironlik huquqlari</string>
+
+    <string name="database">latin6.db</string>
+
+    <string name="about">Ushbu mobil ilova <a href="https://t.me/texnopos"><u>TexnoPOS</u></a> IT maktabi o\'quvchilari <a href="https://t.me/Nurlibay_0805"><u>Ko\'shkinbaev Nurlıbay</u></a> va <a href="https://t.me/alisherdev"><u>Kazakbaev Alisher</u></a> tomonidan ishlab chiqildi.</string>
+    <string name="books">Kitoblar</string>
+    <string name="questions">Savol javoblar</string>
+    <string name="about_owner">G\'oya muallifi</string>
+    <string name="rights">Huquqlar</string>
+    <string name="settings">Sozlamalar</string>
+    <string name="saytga_otish">Saytga o\'tish</string>
+    <string name="order">%1$d. </string>
+    <string name="for_read">%1$s </string>
+    <string name="select_locaole">Dastur imlosini tanlang</string>
+
+</resources>

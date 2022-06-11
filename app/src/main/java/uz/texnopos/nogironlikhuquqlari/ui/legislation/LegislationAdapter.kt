@@ -1,6 +1,5 @@
 package uz.texnopos.nogironlikhuquqlari.ui.legislation
 
-import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -8,13 +7,17 @@ import uz.texnopos.nogironlikhuquqlari.core.onClick
 import uz.texnopos.nogironlikhuquqlari.data.entities.Legislation
 import uz.texnopos.nogironlikhuquqlari.databinding.ItemLegislationBinding
 
-class LegislationAdapter: RecyclerView.Adapter<LegislationAdapter.LegislationViewHolder>() {
+class LegislationAdapter : RecyclerView.Adapter<LegislationAdapter.LegislationViewHolder>() {
 
-    inner class LegislationViewHolder(private val binding: ItemLegislationBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class LegislationViewHolder(private val binding: ItemLegislationBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun populateModel(legislation: Legislation) {
             binding.tvLegislation.text = legislation.year.toString()
             binding.cardView.onClick {
-                onClick.invoke(legislation)
+                try {
+                    onClick.invoke(legislation)
+                } catch (e: Exception) {
+                }
             }
         }
     }
@@ -33,7 +36,8 @@ class LegislationAdapter: RecyclerView.Adapter<LegislationAdapter.LegislationVie
     override fun getItemCount() = models.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LegislationViewHolder {
-        val binding = ItemLegislationBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            ItemLegislationBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return LegislationViewHolder(binding)
     }
 

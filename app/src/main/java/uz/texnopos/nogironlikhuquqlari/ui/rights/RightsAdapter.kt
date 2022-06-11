@@ -13,7 +13,9 @@ class RightsAdapter : RecyclerView.Adapter<RightsAdapter.ItemViewHolder>() {
         fun populateModel(model: Right) {
             bind.tvRight.text = model.title
             bind.card.onClick {
-                onClick.invoke(model)
+                try{
+                    onClick.invoke(model)
+                }catch (e:Exception){}
             }
         }
     }
